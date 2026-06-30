@@ -1,9 +1,12 @@
+import type { ReactNode } from "react";
+import { renderBrandText } from "@/components/wordmark";
+
 type SectionProps = {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
-  eyebrow?: string;
-  title?: string;
-  intro?: string;
+  eyebrow?: ReactNode;
+  title?: ReactNode;
+  intro?: ReactNode;
   tone?: "default" | "muted" | "navy";
 };
 
@@ -30,16 +33,16 @@ export function Section({
             <div className="max-w-3xl">
               {eyebrow && (
                 <p className="type-eyebrow mb-4 text-edge-muted">
-                  {eyebrow}
+                  {renderBrandText(eyebrow)}
                 </p>
               )}
               {title && (
-                <h2 className="type-section-title text-white">{title}</h2>
+                <h2 className="type-section-title text-white">{renderBrandText(title)}</h2>
               )}
             </div>
             {intro && (
               <p className="type-lead max-w-2xl text-edge-soft lg:ml-auto">
-                {intro}
+                {renderBrandText(intro)}
               </p>
             )}
           </div>

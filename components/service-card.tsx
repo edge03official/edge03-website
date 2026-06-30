@@ -1,3 +1,5 @@
+import { renderBrandText } from "@/components/wordmark";
+
 type ServiceCardProps = {
   title: string;
   summary: string;
@@ -24,16 +26,16 @@ export function ServiceCard({
         )}
       </div>
       {signal && (
-        <p className="type-eyebrow mb-3 text-edge-muted">{signal}</p>
+        <p className="type-eyebrow mb-3 text-edge-muted">{renderBrandText(signal)}</p>
       )}
-      <h3 className="type-card-title text-white">{title}</h3>
-      <p className="type-small mt-4 text-edge-soft">{summary}</p>
+      <h3 className="type-card-title text-white">{renderBrandText(title)}</h3>
+      <p className="type-small mt-4 text-edge-soft">{renderBrandText(summary)}</p>
       {items && (
         <ul className="mt-8 grid gap-3 text-edge-muted">
           {items.map((item) => (
             <li key={item} className="type-small flex items-center gap-3">
               <span className="h-px w-5 bg-edge-navyLight" />
-              {item}
+              {renderBrandText(item)}
             </li>
           ))}
         </ul>

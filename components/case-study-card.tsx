@@ -1,4 +1,5 @@
 import { PlaceholderBlock } from "@/components/placeholder-block";
+import { renderBrandText } from "@/components/wordmark";
 
 type CaseStudyCardProps = {
   title: string;
@@ -15,9 +16,9 @@ export function CaseStudyCard({ title, type, summary }: CaseStudyCardProps) {
         variant="proof"
       />
       <div>
-        <p className="type-eyebrow text-edge-muted">{type}</p>
-        <h3 className="type-card-title mt-3 text-white">{title}</h3>
-        <p className="type-small mt-4 text-edge-soft">{summary}</p>
+        <p className="type-eyebrow text-edge-muted">{renderBrandText(type)}</p>
+        <h3 className="type-card-title mt-3 text-white">{renderBrandText(title)}</h3>
+        <p className="type-small mt-4 text-edge-soft">{renderBrandText(summary)}</p>
       </div>
     </article>
   );

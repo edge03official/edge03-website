@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ButtonLink } from "@/components/button-link";
 import { PageIntro } from "@/components/page-intro";
-import { Wordmark } from "@/components/wordmark";
+import { BrandText, Wordmark } from "@/components/wordmark";
 import { Section } from "@/components/section";
 import { company, contactPrompts } from "@/lib/content";
 
@@ -31,8 +31,10 @@ export default function ContactPage() {
               Start with a simple message.
             </h2>
             <p className="type-body mt-4 text-edge-soft">
-              Share what you have, what feels outdated, or what you want the
-              website to help with. EDGE03 will help sort out the next step.
+              <BrandText>
+                Share what you have, what feels outdated, or what you want the
+                website to help with. EDGE03 will help sort out the next step.
+              </BrandText>
             </p>
             <a
               className="type-small mt-8 inline-flex text-edge-soft transition-colors hover:text-white"

@@ -1,3 +1,5 @@
+import { renderBrandText } from "@/components/wordmark";
+
 type ProcessStepProps = {
   index: number;
   title: string;
@@ -13,8 +15,8 @@ export function ProcessStep({ index, title, summary }: ProcessStepProps) {
         </p>
         <span className="h-px w-12 bg-edge-navyLight" />
       </div>
-      <h3 className="type-card-title text-white">{title}</h3>
-      <p className="type-small mt-4 text-edge-soft">{summary}</p>
+      <h3 className="type-card-title text-white">{renderBrandText(title)}</h3>
+      <p className="type-small mt-4 text-edge-soft">{renderBrandText(summary)}</p>
     </article>
   );
 }

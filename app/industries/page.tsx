@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageIntro } from "@/components/page-intro";
+import { BrandText } from "@/components/wordmark";
 import { PlaceholderBlock } from "@/components/placeholder-block";
 import { Section } from "@/components/section";
 import { industries } from "@/lib/content";
@@ -28,8 +29,10 @@ export default function IndustriesPage() {
               </p>
               <h2 className="type-card-title mt-8 text-white">{item}</h2>
               <p className="type-small mt-4 text-edge-soft">
-                Placeholder copy for future examples, common website needs, and
-                practical ways EDGE03 can help.
+                <BrandText>
+                  Placeholder copy for future examples, common website needs, and
+                  practical ways EDGE03 can help.
+                </BrandText>
               </p>
             </article>
           ))}

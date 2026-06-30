@@ -1,7 +1,10 @@
+import type { ReactNode } from "react";
+import { renderBrandText } from "@/components/wordmark";
+
 type PageIntroProps = {
-  eyebrow: React.ReactNode;
-  title: React.ReactNode;
-  summary: string;
+  eyebrow: ReactNode;
+  title: ReactNode;
+  summary: ReactNode;
   meta?: string[];
 };
 
@@ -10,10 +13,10 @@ export function PageIntro({ eyebrow, title, summary, meta }: PageIntroProps) {
     <section className="border-b border-edge-line bg-edge-black">
       <div className="mx-auto grid w-full max-w-7xl gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[1fr_0.46fr] lg:px-10 lg:py-24">
         <div>
-          <p className="type-eyebrow mb-5 text-edge-muted">{eyebrow}</p>
-          <h1 className="type-page-title max-w-4xl text-white">{title}</h1>
+          <p className="type-eyebrow mb-5 text-edge-muted">{renderBrandText(eyebrow)}</p>
+          <h1 className="type-page-title max-w-4xl text-white">{renderBrandText(title)}</h1>
           <p className="type-lead mt-6 max-w-3xl text-edge-soft">
-            {summary}
+            {renderBrandText(summary)}
           </p>
         </div>
         {meta && (
@@ -22,7 +25,7 @@ export function PageIntro({ eyebrow, title, summary, meta }: PageIntroProps) {
             <ul className="mt-5 grid gap-3 text-edge-soft">
               {meta.map((item) => (
                 <li key={item} className="type-small border-t border-edge-line pt-3">
-                  {item}
+                  {renderBrandText(item)}
                 </li>
               ))}
             </ul>

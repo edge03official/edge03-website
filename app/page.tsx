@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ButtonLink } from "@/components/button-link";
-import { Wordmark } from "@/components/wordmark";
+import { BrandText, Wordmark } from "@/components/wordmark";
 import { services } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -20,9 +20,11 @@ export default function Home() {
               Websites built with care for small businesses.
             </h1>
             <p className="type-lead mt-7 max-w-2xl text-edge-soft">
-              EDGE03 helps small businesses build, improve, and maintain
-              professional websites that look good, work well, and are easy to
-              keep updated.
+              <BrandText>
+                EDGE03 helps small businesses build, improve, and maintain
+                professional websites that look good, work well, and are easy to
+                keep updated.
+              </BrandText>
             </p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href="/contact">Start a Project</ButtonLink>

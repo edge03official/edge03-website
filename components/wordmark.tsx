@@ -1,3 +1,5 @@
+import { Fragment, type ReactNode } from "react";
+
 type WordmarkProps = {
   legal?: boolean;
   size?: "xs" | "sm" | "md" | "lg" | "inline";
@@ -17,17 +19,19 @@ export function Wordmark({
   size = "md",
   className = "",
 }: WordmarkProps) {
+  const label = legal ? "EDGE03 LLC" : "EDGE03";
+
   return (
     <span
       className={`type-wordmark inline-flex items-baseline whitespace-nowrap leading-none align-baseline ${sizeClasses[size]} ${className}`}
-      aria-label={legal ? "EDGE03 LLC" : "EDGE03"}
     >
+      <span className="sr-only">{label}</span>
       <span aria-hidden="true" className="leading-none">
         EDGE
       </span>
       <span
         aria-hidden="true"
-        className="ml-[0.045em] translate-y-[0.06em] text-[0.34em] leading-none"
+        className="ml-[0.045em] translate-y-[0.08em] text-[0.34em] leading-none"
       >
         03
       </span>
@@ -38,4 +42,46 @@ export function Wordmark({
       )}
     </span>
   );
+}
+
+type BrandTextProps = {
+  children: ReactNode;
+};
+
+function renderBrandString(value: string) {
+  const parts = value.split(/(EDGE03 LLC|EDGE03)/g);
+
+  return (
+    <>
+      {parts.map((part, index) => {
+        if (part === "EDGE03 LLC") {
+          return <Wordmark key={index} legal size="inline" />;
+        }
+
+        if (part === "EDGE03") {
+          return <Wordmark key={index} size="inline" />;
+        }
+
+        return part;
+      })}
+    </>
+  );
+}
+
+export function BrandText({ children }: BrandTextProps) {
+  return <>{renderBrandText(children)}</>;
+}
+
+export function renderBrandText(value: ReactNode): ReactNode {
+  if (typeof value === "string") {
+    return renderBrandString(value);
+  }
+
+  if (Array.isArray(value)) {
+    return value.map((child, index) => (
+      <Fragment key={index}>{renderBrandText(child)}</Fragment>
+    ));
+  }
+
+  return value;
 }
