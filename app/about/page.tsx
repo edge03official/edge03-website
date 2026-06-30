@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageIntro } from "@/components/page-intro";
+import { Wordmark } from "@/components/wordmark";
 import { Section } from "@/components/section";
 import { founderValues, whyEdge } from "@/lib/content";
 
@@ -13,7 +14,7 @@ export default function AboutPage() {
   return (
     <>
       <PageIntro
-        eyebrow="About EDGE03"
+        eyebrow={<>About <Wordmark size="inline" /></>}
         title="A small website partner for small businesses."
         summary="EDGE03 is built to be approachable, careful, and straightforward. The goal is to help small businesses get websites they feel proud to share."
         meta={["Founded by Nate", "Veteran background", "Clear communication", "Long-term support"]}

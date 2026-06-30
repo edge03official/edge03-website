@@ -1,6 +1,6 @@
 type PageIntroProps = {
-  eyebrow: string;
-  title: string;
+  eyebrow: React.ReactNode;
+  title: React.ReactNode;
   summary: string;
   meta?: string[];
 };
