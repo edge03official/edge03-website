@@ -74,9 +74,9 @@ a {
     font-family:
       var(--font-display), ui-sans-serif, system-ui, -apple-system,
       BlinkMacSystemFont, "Segoe UI", sans-serif;
-    font-size: clamp(3.15rem, 7.4vw, 6.45rem);
-    font-weight: 700;
-    line-height: 0.95;
+    font-size: clamp(2.6rem, 5.2vw, 4.5rem);
+    font-weight: 600;
+    line-height: 1.02;
     letter-spacing: 0;
   }
 
@@ -84,9 +84,9 @@ a {
     font-family:
       var(--font-display), ui-sans-serif, system-ui, -apple-system,
       BlinkMacSystemFont, "Segoe UI", sans-serif;
-    font-size: clamp(2.7rem, 6vw, 4.9rem);
+    font-size: clamp(1.95rem, 3.8vw, 3.1rem);
     font-weight: 600;
-    line-height: 0.98;
+    line-height: 1.12;
     letter-spacing: 0;
   }
 
@@ -94,9 +94,9 @@ a {
     font-family:
       var(--font-display), ui-sans-serif, system-ui, -apple-system,
       BlinkMacSystemFont, "Segoe UI", sans-serif;
-    font-size: clamp(2.1rem, 4vw, 3.65rem);
+    font-size: clamp(1.55rem, 2.7vw, 2.35rem);
     font-weight: 600;
-    line-height: 1.03;
+    line-height: 1.16;
     letter-spacing: 0;
   }
 
@@ -104,30 +104,30 @@ a {
     font-family:
       var(--font-display), ui-sans-serif, system-ui, -apple-system,
       BlinkMacSystemFont, "Segoe UI", sans-serif;
-    font-size: clamp(1.18rem, 1.7vw, 1.55rem);
+    font-size: clamp(1.05rem, 1.35vw, 1.28rem);
     font-weight: 600;
-    line-height: 1.15;
+    line-height: 1.22;
     letter-spacing: 0;
   }
 
   .type-lead {
-    font-size: clamp(1.05rem, 1.6vw, 1.28rem);
+    font-size: clamp(1rem, 1.2vw, 1.12rem);
     font-weight: 400;
-    line-height: 1.75;
+    line-height: 1.78;
     letter-spacing: 0;
   }
 
   .type-body {
-    font-size: 0.98rem;
+    font-size: 0.96rem;
     font-weight: 400;
-    line-height: 1.75;
+    line-height: 1.78;
     letter-spacing: 0;
   }
 
   .type-small {
-    font-size: 0.875rem;
+    font-size: 0.86rem;
     font-weight: 400;
-    line-height: 1.65;
+    line-height: 1.68;
     letter-spacing: 0;
   }
 
@@ -135,7 +135,7 @@ a {
     font-family:
       var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
       "Liberation Mono", "Courier New", monospace;
-    font-size: 0.78rem;
+    font-size: 0.74rem;
     font-weight: 500;
     line-height: 1.45;
     letter-spacing: 0;
@@ -145,7 +145,7 @@ a {
     font-family:
       var(--font-display), ui-sans-serif, system-ui, -apple-system,
       BlinkMacSystemFont, "Segoe UI", sans-serif;
-    font-size: 1.18rem;
+    font-size: 1.06rem;
     font-weight: 700;
     line-height: 1;
     letter-spacing: 0;
@@ -155,7 +155,7 @@ a {
     font-family:
       var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
       "Liberation Mono", "Courier New", monospace;
-    font-size: 0.78rem;
+    font-size: 0.74rem;
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0;
@@ -165,7 +165,7 @@ a {
     font-family:
       var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
       "Liberation Mono", "Courier New", monospace;
-    font-size: 0.78rem;
+    font-size: 0.74rem;
     font-weight: 600;
     line-height: 1.2;
     letter-spacing: 0;
@@ -175,9 +175,9 @@ a {
     font-family:
       var(--font-display), ui-sans-serif, system-ui, -apple-system,
       BlinkMacSystemFont, "Segoe UI", sans-serif;
-    font-size: clamp(3rem, 5vw, 4.25rem);
+    font-size: clamp(2.35rem, 3.6vw, 3.2rem);
     font-weight: 600;
-    line-height: 0.9;
+    line-height: 1;
     letter-spacing: 0;
   }
 }
