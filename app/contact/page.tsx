@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ButtonLink } from "@/components/button-link";
 import { PageIntro } from "@/components/page-intro";
+import { Wordmark } from "@/components/wordmark";
 import { Section } from "@/components/section";
 import { company, contactPrompts } from "@/lib/content";
 
@@ -23,7 +24,9 @@ export default function ContactPage() {
       <Section>
         <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
           <aside className="border border-edge-line bg-white/[0.02] p-6">
-            <p className="type-eyebrow text-edge-muted">EDGE03 LLC</p>
+            <p className="type-eyebrow text-edge-muted">
+              <Wordmark legal size="xs" />
+            </p>
             <h2 className="type-card-title mt-5 text-white">
               Start with a simple message.
             </h2>
@@ -78,7 +81,7 @@ export default function ContactPage() {
               />
             </label>
             <div className="pt-2">
-              <ButtonLink href={`mailto:${company.email}`}>Email EDGE03</ButtonLink>
+              <ButtonLink href={`mailto:${company.email}`}>Email <Wordmark size="xs" /></ButtonLink>
             </div>
           </form>
         </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ButtonLink } from "@/components/button-link";
+import { Wordmark } from "@/components/wordmark";
 import { services } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -73,7 +74,9 @@ export default function Home() {
               Need a website that feels professional and easy to trust?
             </h2>
           </div>
-          <ButtonLink href="/contact">Contact EDGE03</ButtonLink>
+          <ButtonLink href="/contact">
+            Contact <Wordmark size="xs" />
+          </ButtonLink>
         </div>
       </section>
     </>

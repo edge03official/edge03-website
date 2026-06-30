@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { Wordmark } from "@/components/wordmark";
 import { company, navLinks } from "@/lib/content";
 
 export function SiteHeader() {
@@ -22,7 +23,7 @@ export function SiteHeader() {
             E3
           </span>
           <span className="grid min-w-0 leading-none">
-            <span className="type-wordmark truncate">{company.name}</span>
+            <Wordmark className="text-white" />
             <span className="type-meta mt-1.5 hidden text-edge-muted sm:block">
               {company.tagline}
             </span>

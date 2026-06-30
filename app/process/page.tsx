@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ButtonLink } from "@/components/button-link";
 import { PageIntro } from "@/components/page-intro";
+import { Wordmark } from "@/components/wordmark";
 import { ProcessStep } from "@/components/process-step";
 import { Section } from "@/components/section";
 import { processSteps } from "@/lib/content";
@@ -34,7 +35,9 @@ export default function ProcessPage() {
           <h2 className="type-section-title max-w-2xl text-white">
             Ready to talk through your website?
           </h2>
-          <ButtonLink href="/contact">Contact EDGE03</ButtonLink>
+          <ButtonLink href="/contact">
+            Contact <Wordmark size="xs" />
+          </ButtonLink>
         </div>
       </Section>
     </>

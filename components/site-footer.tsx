@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Wordmark } from "@/components/wordmark";
 import { company, footerLinks } from "@/lib/content";
 
 export function SiteFooter() {
@@ -11,7 +12,7 @@ export function SiteFooter() {
             <span className="type-meta flex h-11 w-11 items-center justify-center border border-edge-line bg-edge-navy text-white">
               E3
             </span>
-            <span className="type-wordmark text-white">{company.legalName}</span>
+            <Wordmark legal className="text-white" />
           </div>
           <p className="type-meta max-w-md text-edge-soft">{company.tagline}</p>
           <p className="type-small mt-6 max-w-md text-edge-muted">
@@ -45,7 +46,13 @@ export function SiteFooter() {
       <div className="border-t border-edge-line">
         <div className="type-small mx-auto flex w-full max-w-7xl px-5 py-6 text-edge-muted sm:px-8 lg:px-10">
           <p>
-            © {new Date().getFullYear()} {company.legalName}. All rights reserved.
+            © {new Date().getFullYear()} {" "}
+            <Wordmark
+              legal
+              size="sm"
+              className="align-baseline text-edge-muted"
+            />
+            . All rights reserved.
           </p>
         </div>
       </div>
