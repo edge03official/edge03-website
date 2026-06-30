@@ -28,15 +28,15 @@ const mono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://edge03.com"),
   title: {
-    default: "EDGE03 | Improve. Integrate. Grow.",
+    default: "EDGE03 | Websites for Small Businesses",
     template: "%s | EDGE03",
   },
   description:
-    "EDGE03 helps businesses modernize websites, connect existing tools, optimize online presence, and support long-term growth.",
+    "EDGE03 helps small businesses build, modernize, and maintain professional websites with care, clarity, and long-term support.",
   openGraph: {
-    title: "EDGE03 | Improve. Integrate. Grow.",
+    title: "EDGE03 | Websites for Small Businesses",
     description:
-      "Premium business modernization, website improvement, tool integration, and long-term support.",
+      "Professional website build, refresh, and maintenance support for small businesses.",
     url: "https://edge03.com",
     siteName: "EDGE03",
     type: "website",

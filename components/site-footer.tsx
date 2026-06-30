@@ -4,7 +4,7 @@ import { company, footerLinks } from "@/lib/content";
 export function SiteFooter() {
   return (
     <footer className="border-t border-edge-line bg-edge-black">
-      <div className="mx-auto grid w-full max-w-7xl gap-12 px-5 py-14 sm:px-8 lg:grid-cols-[1.1fr_1fr_0.8fr] lg:px-10">
+      <div className="mx-auto grid w-full max-w-7xl gap-10 px-5 py-14 sm:px-8 lg:grid-cols-[1fr_0.8fr_0.65fr] lg:px-10">
         <div>
           <div className="mb-5 flex items-center gap-4">
             {/* Replace this wordmark block with the final EDGE03 logo asset. */}
@@ -15,12 +15,12 @@ export function SiteFooter() {
           </div>
           <p className="type-meta max-w-md text-edge-soft">{company.tagline}</p>
           <p className="type-small mt-6 max-w-md text-edge-muted">
-            Modern websites, practical integrations, online presence improvements,
-            and long-term support for established businesses.
+            Websites built, improved, and maintained with care for small
+            businesses that want to look professional online.
           </p>
         </div>
 
-        <nav aria-label="Footer navigation" className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+        <nav aria-label="Footer navigation" className="grid grid-cols-2 gap-4">
           {footerLinks.map((link) => (
             <Link
               key={link.href}
@@ -33,7 +33,7 @@ export function SiteFooter() {
         </nav>
 
         <div className="border border-edge-line bg-white/[0.02] p-5">
-          <p className="type-eyebrow text-edge-muted">Contact placeholder</p>
+          <p className="type-eyebrow text-edge-muted">Contact</p>
           <a
             className="type-small mt-4 inline-flex text-edge-soft transition-colors hover:text-white"
             href={`mailto:${company.email}`}

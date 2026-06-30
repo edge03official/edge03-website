@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
 import { ButtonLink } from "@/components/button-link";
 import { PageIntro } from "@/components/page-intro";
-import { PlaceholderBlock } from "@/components/placeholder-block";
 import { Section } from "@/components/section";
 import { ServiceCard } from "@/components/service-card";
-import { serviceDetails, systemPrinciples } from "@/lib/content";
+import { serviceDetails } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Website modernization, tool integration, online presence optimization, and long-term support from EDGE03.",
+    "EDGE03 builds, modernizes, and maintains professional websites for small businesses.",
 };
 
 export default function ServicesPage() {
@@ -17,46 +16,23 @@ export default function ServicesPage() {
     <>
       <PageIntro
         eyebrow="Services"
-        title="Modernization, integration, presence, and support."
-        summary="EDGE03 improves the systems around a business website so the customer experience becomes clearer and the operation becomes easier to manage."
-        meta={["Website sections", "Tool connections", "Presence improvements", "Support plans"]}
+        title="Build, modernize, or maintain your website."
+        summary="EDGE03 keeps the offer simple: help small businesses look professional online and keep their websites useful over time."
+        meta={["Build", "Modernize", "Maintain"]}
       />
 
       <Section>
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-3">
           {serviceDetails.map((service, index) => (
             <ServiceCard key={service.title} index={index + 1} {...service} />
           ))}
         </div>
       </Section>
 
-      <Section
-        tone="muted"
-        eyebrow="Service framework"
-        title="Designed to improve the operating system around the business."
-        intro="Future copy can expand this area with package language, examples, deliverables, and links into maintenance plans."
-      >
-        <div className="grid gap-6 lg:grid-cols-[1fr_0.8fr]">
-          <div className="grid gap-4 sm:grid-cols-3">
-            {systemPrinciples.map((principle) => (
-              <article key={principle.title} className="border border-edge-line bg-edge-black p-5">
-                <h2 className="type-card-title text-white">
-                  {principle.title}
-                </h2>
-                <p className="type-small mt-4 text-edge-soft">
-                  {principle.summary}
-                </p>
-              </article>
-            ))}
-          </div>
-          <PlaceholderBlock label="Service diagram or real work sample placeholder" />
-        </div>
-      </Section>
-
       <Section tone="navy">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <h2 className="type-section-title max-w-2xl text-white">
-            Need a clearer business website and connected tools?
+            Want help improving your website?
           </h2>
           <ButtonLink href="/contact">Start a Project</ButtonLink>
         </div>

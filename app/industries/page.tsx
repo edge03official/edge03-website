@@ -5,19 +5,19 @@ import { Section } from "@/components/section";
 import { industries } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Industries",
+  title: "Business Types",
   description:
-    "Industry placeholder page for future EDGE03 business categories and examples.",
+    "Placeholder page for future EDGE03 small business website examples.",
 };
 
 export default function IndustriesPage() {
   return (
     <>
       <PageIntro
-        eyebrow="Industries"
-        title="Placeholder route for future industry focus areas."
-        summary="This page can later organize service businesses, professional offices, local operators, and other business categories EDGE03 supports."
-        meta={["Industry overview", "Service fit", "Example outcomes", "Client proof"]}
+        eyebrow="Business Types"
+        title="Future page for small business examples."
+        summary="This page can later show the kinds of local businesses EDGE03 can help with website builds, refreshes, and maintenance."
+        meta={["Local businesses", "Website needs", "Example projects"]}
       />
       <Section>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -28,15 +28,15 @@ export default function IndustriesPage() {
               </p>
               <h2 className="type-card-title mt-8 text-white">{item}</h2>
               <p className="type-small mt-4 text-edge-soft">
-                Placeholder industry copy, relevant services, proof points, and
-                customer workflow notes.
+                Placeholder copy for future examples, common website needs, and
+                practical ways EDGE03 can help.
               </p>
             </article>
           ))}
         </div>
       </Section>
       <Section tone="muted">
-        <PlaceholderBlock label="Industry proof image or client logo field placeholder" height="lg" />
+        <PlaceholderBlock label="Future local business website example image" height="lg" />
       </Section>
     </>
   );

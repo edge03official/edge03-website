@@ -6,188 +6,167 @@ export const company = {
 };
 
 export const navLinks = [
+  { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
-  { label: "Process", href: "/process" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 
-export const footerLinks = [
-  ...navLinks,
-  { label: "Industries", href: "/industries" },
-  { label: "Case Studies", href: "/case-studies" },
-  { label: "Maintenance Plans", href: "/maintenance-plans" },
-];
+export const footerLinks = navLinks;
 
 export const heroSignals = [
-  { label: "Website", value: "Modernized" },
-  { label: "Tools", value: "Connected" },
-  { label: "Presence", value: "Improved" },
-  { label: "Support", value: "Ongoing" },
+  { label: "Build", value: "New websites" },
+  { label: "Modernize", value: "Better first impressions" },
+  { label: "Maintain", value: "Ongoing care" },
 ];
 
 export const services = [
   {
-    title: "Website Modernization",
-    signal: "Public presence",
+    title: "Build",
+    signal: "New websites",
     summary:
-      "Refresh the structure, presentation, and usability of an existing business website without losing what already works.",
+      "Professional websites for small businesses that need a strong online foundation.",
   },
   {
-    title: "Tool Integration",
-    signal: "Connected systems",
+    title: "Modernize",
+    signal: "Improve what exists",
     summary:
-      "Connect forms, calendars, CRMs, analytics, automations, and business systems into a cleaner customer workflow.",
+      "Refresh outdated websites so they look better, load faster, and work well on every device.",
   },
   {
-    title: "Online Presence Optimization",
-    signal: "Customer trust",
+    title: "Maintain",
+    signal: "Long-term support",
     summary:
-      "Improve search visibility, local trust signals, conversion paths, and the digital details customers notice first.",
-  },
-  {
-    title: "Long-Term Support",
-    signal: "Ongoing care",
-    summary:
-      "Provide reliable maintenance, improvements, monitoring, and practical guidance after launch.",
+      "Ongoing help so your website stays updated, secure, useful, and easy to trust.",
   },
 ];
 
 export const processSteps = [
   {
-    title: "Assess",
+    title: "Talk",
     summary:
-      "Map the current website, tools, customer touchpoints, and operational friction.",
+      "We start with a clear conversation about your business, your website, and what needs to improve.",
   },
   {
-    title: "Modernize",
+    title: "Plan",
     summary:
-      "Improve the experience, content structure, performance, and visual trust layer.",
+      "You get a practical plan with plain-language next steps before work begins.",
   },
   {
-    title: "Integrate",
+    title: "Build",
     summary:
-      "Connect the systems the business already relies on so work moves with less manual handling.",
+      "The website is built or improved with care, clarity, and attention to the details customers notice.",
   },
   {
     title: "Support",
     summary:
-      "Measure, refine, maintain, and expand the system as the business grows.",
+      "After launch, EDGE03 can help keep the site maintained and moving in the right direction.",
   },
 ];
 
+export const websiteReasons = [
+  "Your website should make a strong first impression.",
+  "It should be easy for customers to understand what you do.",
+  "It should work smoothly on phones, tablets, and desktops.",
+];
+
+export const founderValues = [
+  "Integrity",
+  "Attention to detail",
+  "Accountability",
+  "Doing the job right",
+];
+
 export const proofStats = [
-  { value: "01", label: "Modernize the public website" },
-  { value: "02", label: "Connect existing business tools" },
-  { value: "03", label: "Support steady improvement" },
+  { value: "01", label: "Look professional online" },
+  { value: "02", label: "Make it easier to contact you" },
+  { value: "03", label: "Keep your site cared for" },
 ];
 
 export const whyEdge = [
-  "Business-first modernization, not unnecessary software replacement.",
-  "Practical integrations around the tools teams already use.",
-  "Clear systems thinking across websites, operations, and customer experience.",
-  "Long-term support designed for steady improvement after launch.",
+  "Clear communication and honest recommendations.",
+  "Websites built with care, not rushed templates.",
+  "Support for improving what you already have.",
+  "A practical partner for small business owners.",
 ];
 
 export const systemPrinciples = [
   {
     title: "Keep",
     summary:
-      "Preserve useful systems, working tools, existing workflows, and hard-won business knowledge.",
+      "Keep what already works for your business and improve the parts that are holding the website back.",
   },
   {
-    title: "Connect",
+    title: "Clarify",
     summary:
-      "Link the website, forms, calendars, analytics, and customer touchpoints into a cleaner flow.",
+      "Make the site easier to understand so customers know who you are, what you offer, and how to reach you.",
   },
   {
-    title: "Improve",
+    title: "Care",
     summary:
-      "Refine the customer experience, operational visibility, and long-term maintenance rhythm.",
+      "Give the website steady attention after launch so it remains useful instead of becoming neglected.",
   },
 ];
 
 export const caseStudies = [
   {
-    title: "Regional Service Business",
-    type: "Placeholder case study",
+    title: "Local Business Website",
+    type: "Future case study",
     summary:
-      "Future space for a website modernization story, before-and-after metrics, and operational improvements.",
+      "Future space for a simple before-and-after story showing how a small business website improved.",
   },
   {
-    title: "Professional Office",
-    type: "Placeholder case study",
+    title: "Website Refresh",
+    type: "Future case study",
     summary:
-      "Future space for customer journey improvements, contact flow upgrades, and local presence wins.",
+      "Future space for a practical website update with clearer content and better mobile experience.",
   },
 ];
 
 export const testimonials = [
   {
     quote:
-      "Placeholder testimonial for a future client quote about clarity, reliability, and measurable improvement.",
+      "Placeholder testimonial for a future client quote about trust, clear communication, and quality work.",
     name: "Client Name",
-    role: "Company / Role",
+    role: "Small Business Owner",
   },
   {
     quote:
-      "Placeholder testimonial for long-term support, communication, and business impact.",
+      "Placeholder testimonial for ongoing support and a website that is easier to manage.",
     name: "Client Name",
-    role: "Company / Role",
+    role: "Business / Role",
   },
 ];
 
 export const serviceDetails = [
   {
-    title: "Websites",
+    title: "Build",
     summary:
-      "Modern business websites built around credibility, clear action, and maintainable content sections.",
-    items: ["Structure", "Content systems", "Performance", "Conversion paths"],
+      "New websites for small businesses that need a professional, trustworthy online foundation.",
+    items: ["Clear pages", "Mobile-ready layout", "Contact paths", "Launch support"],
   },
   {
-    title: "Integrations",
+    title: "Modernize",
     summary:
-      "Connections between existing tools that reduce manual follow-up and make customer data easier to use.",
-    items: ["Forms", "Calendars", "CRMs", "Analytics"],
+      "Improve outdated websites so they feel current, load faster, and make a better first impression.",
+    items: ["Visual refresh", "Content cleanup", "Mobile improvements", "Performance basics"],
   },
   {
-    title: "Presence",
+    title: "Maintain",
     summary:
-      "Improvement work across the places customers evaluate a business before reaching out.",
-    items: ["Search basics", "Local profiles", "Trust signals", "Measurement"],
-  },
-  {
-    title: "Support",
-    summary:
-      "Ongoing care for updates, edits, monitoring, issue resolution, and practical improvement planning.",
-    items: ["Maintenance", "Reporting", "Iteration", "Guidance"],
+      "Ongoing support so your website stays updated, secure, useful, and aligned with your business.",
+    items: ["Updates", "Small edits", "Health checks", "Practical guidance"],
   },
 ];
 
-export const workingModel = [
-  {
-    title: "Discovery",
-    summary:
-      "Clarify goals, current tools, customer paths, and the parts of the existing system that should stay.",
-  },
-  {
-    title: "Implementation",
-    summary:
-      "Modernize the public experience, organize content, connect tools, and prepare the site for real operations.",
-  },
-  {
-    title: "Support",
-    summary:
-      "Monitor, maintain, adjust, and keep improving the website and connected systems after launch.",
-  },
-];
+export const workingModel = processSteps;
 
 export const industries = [
-  "Service businesses",
+  "Local service businesses",
   "Professional offices",
-  "Local operators",
-  "Growing teams",
-  "Specialized contractors",
+  "Contractors",
+  "Independent operators",
+  "Growing small teams",
   "Community organizations",
 ];
 
@@ -195,23 +174,23 @@ export const maintenancePlans = [
   {
     title: "Essential",
     summary:
-      "Placeholder plan for core updates, health checks, and reliable website care.",
+      "Placeholder plan for basic updates, health checks, and reliable website care.",
   },
   {
-    title: "Professional",
+    title: "Support",
     summary:
-      "Placeholder plan for ongoing edits, reporting, integrations, and improvement support.",
+      "Placeholder plan for ongoing edits, updates, and practical help as the business changes.",
   },
   {
-    title: "Ongoing Growth",
+    title: "Growth",
     summary:
-      "Placeholder plan for active iteration, new sections, customer flow improvements, and advisory support.",
+      "Placeholder plan for steady improvements, new content, and continued website guidance.",
   },
 ];
 
 export const contactPrompts = [
-  "Current website or domain",
-  "Tools already in use",
-  "Most important customer action",
-  "Support needs after launch",
+  "Current website, if you have one",
+  "What you want the website to help with",
+  "What feels outdated or unclear",
+  "Whether you need ongoing support",
 ];

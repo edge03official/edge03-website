@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
 import { PageIntro } from "@/components/page-intro";
-import { PlaceholderBlock } from "@/components/placeholder-block";
 import { Section } from "@/components/section";
-import { StatCard } from "@/components/stat-card";
-import { proofStats, whyEdge } from "@/lib/content";
+import { founderValues, whyEdge } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "About",
   description:
-    "About EDGE03, a business improvement company focused on websites, integrations, online presence, and long-term support.",
+    "About EDGE03, a small website business founded by Nate to help small businesses look professional online.",
 };
 
 export default function AboutPage() {
@@ -16,53 +14,29 @@ export default function AboutPage() {
     <>
       <PageIntro
         eyebrow="About EDGE03"
-        title="A business improvement company for the modern web."
-        summary="EDGE03 helps established businesses strengthen the way customers find them, understand them, contact them, and move through their online experience."
-        meta={["Company story", "Mission statement", "Founder image", "Operating principles"]}
+        title="A small website partner for small businesses."
+        summary="EDGE03 is built to be approachable, careful, and straightforward. The goal is to help small businesses get websites they feel proud to share."
+        meta={["Founded by Nate", "Veteran background", "Clear communication", "Long-term support"]}
       />
 
-      <Section>
-        <div className="grid gap-10 lg:grid-cols-[0.95fr_1fr] lg:items-center">
-          <PlaceholderBlock
-            label="Founder, team, or office image placeholder"
-            height="lg"
-          />
-          <div>
-            <p className="type-eyebrow mb-4 text-edge-muted">
-              Practical improvement
-            </p>
-            <h2 className="type-section-title text-white">
-              Built around useful modernization, not unnecessary replacement.
-            </h2>
-            <p className="type-lead mt-6 text-edge-soft">
-              Future mission and founder copy can live here. The layout is
-              prepared for a concise company story, business philosophy, and the
-              reason EDGE03 focuses on modernizing websites, integrations, and
-              customer touchpoints around what a business already uses.
-            </p>
-          </div>
-        </div>
-      </Section>
-
-      <Section tone="navy" eyebrow="Focus" title="Three areas of improvement.">
-        <div className="grid gap-4 md:grid-cols-3">
-          {proofStats.map((stat) => (
-            <StatCard key={stat.value} value={stat.value} label={stat.label} />
+      <Section
+        eyebrow="Founder"
+        title="Nate started EDGE03 to help business owners improve their online presence with care."
+        intro="His Air Force veteran background informs the way EDGE03 works: be accountable, pay attention to details, communicate clearly, and do the job right."
+      >
+        <div className="flex flex-wrap gap-3">
+          {founderValues.map((value) => (
+            <span key={value} className="type-meta border border-edge-line bg-white/[0.02] px-4 py-3 text-edge-soft">
+              {value}
+            </span>
           ))}
         </div>
       </Section>
 
-      <Section
-        tone="muted"
-        eyebrow="Principles"
-        title="What EDGE03 should be known for."
-      >
+      <Section tone="muted" eyebrow="What matters" title="Professional, honest, and practical.">
         <div className="grid gap-4 md:grid-cols-2">
-          {whyEdge.map((item, index) => (
+          {whyEdge.map((item) => (
             <div key={item} className="border border-edge-line bg-edge-black p-6">
-              <p className="type-meta mb-5 text-edge-muted">
-                {String(index + 1).padStart(2, "0")}
-              </p>
               <p className="type-body text-edge-soft">{item}</p>
             </div>
           ))}

@@ -6,7 +6,7 @@ import { maintenancePlans } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Maintenance Plans",
   description:
-    "Placeholder maintenance plans page for future EDGE03 support options.",
+    "Placeholder maintenance plans page for future EDGE03 website support options.",
 };
 
 export default function MaintenancePlansPage() {
@@ -14,9 +14,9 @@ export default function MaintenancePlansPage() {
     <>
       <PageIntro
         eyebrow="Maintenance Plans"
-        title="Placeholder route for long-term support options."
-        summary="This page can later hold support tiers, response expectations, update schedules, monitoring notes, and reporting details."
-        meta={["Plan tiers", "Support cadence", "Response expectations", "Reporting"]}
+        title="Future website support options."
+        summary="This page can later hold simple support plans for updates, edits, health checks, and ongoing website care."
+        meta={["Updates", "Small edits", "Health checks", "Support"]}
       />
       <Section>
         <div className="grid gap-4 md:grid-cols-3">
@@ -31,9 +31,6 @@ export default function MaintenancePlansPage() {
               <p className="type-small mt-4 text-edge-soft">
                 {plan.summary}
               </p>
-              <div className="type-small mt-8 border-t border-edge-line pt-5 text-edge-muted">
-                Future pricing, cadence, and deliverables.
-              </div>
             </article>
           ))}
         </div>
