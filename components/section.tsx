@@ -29,18 +29,16 @@ export function Section({
           <div className="mb-12 grid gap-6 lg:grid-cols-[0.78fr_1fr] lg:items-end">
             <div className="max-w-3xl">
               {eyebrow && (
-                <p className="mb-4 text-xs font-semibold uppercase text-edge-muted">
+                <p className="type-eyebrow mb-4 text-edge-muted">
                   {eyebrow}
                 </p>
               )}
               {title && (
-                <h2 className="text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
-                  {title}
-                </h2>
+                <h2 className="type-section-title text-white">{title}</h2>
               )}
             </div>
             {intro && (
-              <p className="max-w-2xl text-base leading-7 text-edge-soft sm:text-lg lg:ml-auto">
+              <p className="type-lead max-w-2xl text-edge-soft lg:ml-auto">
                 {intro}
               </p>
             )}

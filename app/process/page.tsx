@@ -38,13 +38,13 @@ export default function ProcessPage() {
         <div className="grid gap-4 md:grid-cols-3">
           {workingModel.map((item, index) => (
             <article key={item.title} className="border border-edge-line bg-edge-black p-6">
-              <p className="text-sm font-semibold text-edge-muted">
+              <p className="type-meta text-edge-muted">
                 {String(index + 1).padStart(2, "0")}
               </p>
-              <h2 className="mt-8 text-xl font-semibold text-white">
+              <h2 className="type-card-title mt-8 text-white">
                 {item.title}
               </h2>
-              <p className="mt-4 text-sm leading-6 text-edge-soft">
+              <p className="type-small mt-4 text-edge-soft">
                 {item.summary}
               </p>
             </article>
@@ -54,7 +54,7 @@ export default function ProcessPage() {
 
       <Section tone="navy">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-          <h2 className="max-w-2xl text-3xl font-semibold leading-tight text-white">
+          <h2 className="type-section-title max-w-2xl text-white">
             See how the process fits your current business systems.
           </h2>
           <ButtonLink href="/contact">Contact EDGE03</ButtonLink>

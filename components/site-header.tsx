@@ -10,36 +10,39 @@ export function SiteHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-edge-line bg-edge-black/95 backdrop-blur">
-      <div className="mx-auto flex min-h-20 w-full max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
+    <header className="sticky top-0 z-50 border-b border-edge-line bg-edge-black">
+      <div className="mx-auto flex min-h-20 w-full max-w-7xl items-center justify-between gap-6 px-5 sm:min-h-24 sm:px-8 lg:px-10">
         <Link
           href="/"
-          className="flex items-center gap-3 text-white"
+          className="group flex min-w-0 items-center gap-4 text-white"
           onClick={() => setIsOpen(false)}
         >
           {/* Replace this wordmark block with the final EDGE03 logo asset. */}
-          <span className="flex h-10 w-10 items-center justify-center border border-edge-line bg-edge-navy text-sm font-semibold">
+          <span className="type-meta flex h-11 w-11 shrink-0 items-center justify-center border border-edge-line bg-edge-navy text-white transition-colors group-hover:border-edge-soft sm:h-12 sm:w-12">
             E3
           </span>
-          <span className="grid leading-none">
-            <span className="text-lg font-semibold">{company.name}</span>
-            <span className="mt-1 hidden text-[11px] font-semibold uppercase text-edge-muted sm:block">
+          <span className="grid min-w-0 leading-none">
+            <span className="type-wordmark truncate">{company.name}</span>
+            <span className="type-meta mt-2 hidden text-edge-muted sm:block">
               {company.tagline}
             </span>
           </span>
         </Link>
 
-        <nav aria-label="Main navigation" className="hidden items-center gap-8 md:flex">
+        <nav
+          aria-label="Main navigation"
+          className="hidden items-center gap-1 border border-edge-line bg-edge-matte p-1 md:flex"
+        >
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`border-b py-2 text-sm transition-colors ${
+                className={`type-nav border px-4 py-3 transition-colors ${
                   isActive
-                    ? "border-white text-white"
-                    : "border-transparent text-edge-soft hover:border-edge-line hover:text-white"
+                    ? "border-edge-line bg-edge-navy text-white"
+                    : "border-transparent text-edge-soft hover:border-edge-line hover:bg-edge-black hover:text-white"
                 }`}
               >
                 {link.label}
@@ -50,14 +53,14 @@ export function SiteHeader() {
 
         <Link
           href="/contact"
-          className="hidden min-h-11 items-center justify-center border border-edge-line px-5 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white/5 lg:inline-flex"
+          className="type-button hidden min-h-12 items-center justify-center border border-edge-line px-5 text-white transition-colors hover:border-white hover:bg-white/5 lg:inline-flex"
         >
           Start a Project
         </Link>
 
         <button
           type="button"
-          className="inline-flex h-11 w-11 items-center justify-center border border-edge-line text-white transition-colors hover:border-white md:hidden"
+          className="inline-flex h-12 w-12 items-center justify-center border border-edge-line text-white transition-colors hover:border-white hover:bg-white/5 md:hidden"
           aria-label="Toggle navigation"
           aria-expanded={isOpen}
           onClick={() => setIsOpen((value) => !value)}
@@ -76,17 +79,29 @@ export function SiteHeader() {
           aria-label="Mobile navigation"
           className="border-t border-edge-line bg-edge-black md:hidden"
         >
-          <div className="mx-auto flex w-full max-w-7xl flex-col px-5 py-4 sm:px-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="border-b border-edge-line py-4 text-base text-edge-soft transition-colors last:border-b-0 hover:text-white"
-                onClick={() => setIsOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
+          <div className="mx-auto flex w-full max-w-7xl flex-col px-5 py-3 sm:px-8">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`type-nav border-b border-edge-line py-5 transition-colors last:border-b-0 ${
+                    isActive ? "text-white" : "text-edge-soft hover:text-white"
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+            <Link
+              href="/contact"
+              className="type-button mt-3 inline-flex min-h-12 items-center justify-center border border-edge-line px-5 text-white transition-colors hover:border-white hover:bg-white/5"
+              onClick={() => setIsOpen(false)}
+            >
+              Start a Project
+            </Link>
           </div>
         </nav>
       )}

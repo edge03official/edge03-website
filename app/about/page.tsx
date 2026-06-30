@@ -28,13 +28,13 @@ export default function AboutPage() {
             height="lg"
           />
           <div>
-            <p className="mb-4 text-xs font-semibold uppercase text-edge-muted">
+            <p className="type-eyebrow mb-4 text-edge-muted">
               Practical improvement
             </p>
-            <h2 className="text-3xl font-semibold leading-tight text-white sm:text-4xl">
+            <h2 className="type-section-title text-white">
               Built around useful modernization, not unnecessary replacement.
             </h2>
-            <p className="mt-6 text-base leading-8 text-edge-soft">
+            <p className="type-lead mt-6 text-edge-soft">
               Future mission and founder copy can live here. The layout is
               prepared for a concise company story, business philosophy, and the
               reason EDGE03 focuses on modernizing websites, integrations, and
@@ -60,10 +60,10 @@ export default function AboutPage() {
         <div className="grid gap-4 md:grid-cols-2">
           {whyEdge.map((item, index) => (
             <div key={item} className="border border-edge-line bg-edge-black p-6">
-              <p className="mb-5 text-sm font-semibold text-edge-muted">
+              <p className="type-meta mb-5 text-edge-muted">
                 {String(index + 1).padStart(2, "0")}
               </p>
-              <p className="text-base leading-7 text-edge-soft">{item}</p>
+              <p className="type-body text-edge-soft">{item}</p>
             </div>
           ))}
         </div>

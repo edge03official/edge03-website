@@ -6,19 +6,15 @@ export function SiteFooter() {
     <footer className="border-t border-edge-line bg-edge-black">
       <div className="mx-auto grid w-full max-w-7xl gap-12 px-5 py-14 sm:px-8 lg:grid-cols-[1.1fr_1fr_0.8fr] lg:px-10">
         <div>
-          <div className="mb-5 flex items-center gap-3">
+          <div className="mb-5 flex items-center gap-4">
             {/* Replace this wordmark block with the final EDGE03 logo asset. */}
-            <span className="flex h-10 w-10 items-center justify-center border border-edge-line bg-edge-navy text-sm font-semibold">
+            <span className="type-meta flex h-11 w-11 items-center justify-center border border-edge-line bg-edge-navy text-white">
               E3
             </span>
-            <span className="text-lg font-semibold text-white">
-              {company.legalName}
-            </span>
+            <span className="type-wordmark text-white">{company.legalName}</span>
           </div>
-          <p className="max-w-md text-sm leading-6 text-edge-soft">
-            {company.tagline}
-          </p>
-          <p className="mt-6 max-w-md text-sm leading-6 text-edge-muted">
+          <p className="type-meta max-w-md text-edge-soft">{company.tagline}</p>
+          <p className="type-small mt-6 max-w-md text-edge-muted">
             Modern websites, practical integrations, online presence improvements,
             and long-term support for established businesses.
           </p>
@@ -29,7 +25,7 @@ export function SiteFooter() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-edge-soft transition-colors hover:text-white"
+              className="type-small text-edge-soft transition-colors hover:text-white"
             >
               {link.label}
             </Link>
@@ -37,11 +33,9 @@ export function SiteFooter() {
         </nav>
 
         <div className="border border-edge-line bg-white/[0.02] p-5">
-          <p className="text-xs font-semibold uppercase text-edge-muted">
-            Contact placeholder
-          </p>
+          <p className="type-eyebrow text-edge-muted">Contact placeholder</p>
           <a
-            className="mt-4 inline-flex text-sm text-edge-soft transition-colors hover:text-white"
+            className="type-small mt-4 inline-flex text-edge-soft transition-colors hover:text-white"
             href={`mailto:${company.email}`}
           >
             {company.email}
@@ -49,7 +43,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-edge-line">
-        <div className="mx-auto flex w-full max-w-7xl px-5 py-6 text-sm text-edge-muted sm:px-8 lg:px-10">
+        <div className="type-small mx-auto flex w-full max-w-7xl px-5 py-6 text-edge-muted sm:px-8 lg:px-10">
           <p>
             © {new Date().getFullYear()} {company.legalName}. All rights reserved.
           </p>

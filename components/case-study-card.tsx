@@ -15,11 +15,9 @@ export function CaseStudyCard({ title, type, summary }: CaseStudyCardProps) {
         variant="proof"
       />
       <div>
-        <p className="text-xs font-semibold uppercase text-edge-muted">{type}</p>
-        <h3 className="mt-3 text-xl font-semibold leading-snug text-white">
-          {title}
-        </h3>
-        <p className="mt-4 text-sm leading-6 text-edge-soft">{summary}</p>
+        <p className="type-eyebrow text-edge-muted">{type}</p>
+        <h3 className="type-card-title mt-3 text-white">{title}</h3>
+        <p className="type-small mt-4 text-edge-soft">{summary}</p>
       </div>
     </article>
   );

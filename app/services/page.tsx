@@ -40,10 +40,10 @@ export default function ServicesPage() {
           <div className="grid gap-4 sm:grid-cols-3">
             {systemPrinciples.map((principle) => (
               <article key={principle.title} className="border border-edge-line bg-edge-black p-5">
-                <h2 className="text-xl font-semibold text-white">
+                <h2 className="type-card-title text-white">
                   {principle.title}
                 </h2>
-                <p className="mt-4 text-sm leading-6 text-edge-soft">
+                <p className="type-small mt-4 text-edge-soft">
                   {principle.summary}
                 </p>
               </article>
@@ -55,7 +55,7 @@ export default function ServicesPage() {
 
       <Section tone="navy">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-          <h2 className="max-w-2xl text-3xl font-semibold leading-tight text-white">
+          <h2 className="type-section-title max-w-2xl text-white">
             Need a clearer business website and connected tools?
           </h2>
           <ButtonLink href="/contact">Start a Project</ButtonLink>

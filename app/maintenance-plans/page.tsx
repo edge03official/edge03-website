@@ -22,16 +22,16 @@ export default function MaintenancePlansPage() {
         <div className="grid gap-4 md:grid-cols-3">
           {maintenancePlans.map((plan, index) => (
             <article key={plan.title} className="border border-edge-line bg-white/[0.02] p-6">
-              <p className="text-sm font-semibold text-edge-muted">
+              <p className="type-meta text-edge-muted">
                 {String(index + 1).padStart(2, "0")}
               </p>
-              <h2 className="mt-8 text-2xl font-semibold text-white">
+              <h2 className="type-card-title mt-8 text-white">
                 {plan.title}
               </h2>
-              <p className="mt-4 text-sm leading-6 text-edge-soft">
+              <p className="type-small mt-4 text-edge-soft">
                 {plan.summary}
               </p>
-              <div className="mt-8 border-t border-edge-line pt-5 text-sm text-edge-muted">
+              <div className="type-small mt-8 border-t border-edge-line pt-5 text-edge-muted">
                 Future pricing, cadence, and deliverables.
               </div>
             </article>

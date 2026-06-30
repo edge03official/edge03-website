@@ -32,13 +32,13 @@ export default function Home() {
       <section className="border-b border-edge-line bg-edge-black">
         <div className="mx-auto grid min-h-[calc(100svh-5rem)] w-full max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1.02fr_0.98fr] lg:px-10">
           <div>
-            <p className="mb-6 text-sm font-semibold uppercase text-edge-muted">
+            <p className="type-eyebrow mb-6 text-edge-muted">
               {company.tagline}
             </p>
-            <h1 className="max-w-4xl text-6xl font-semibold leading-none text-white sm:text-7xl lg:text-8xl">
+            <h1 className="type-hero max-w-4xl text-white">
               EDGE03
             </h1>
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-edge-soft sm:text-xl">
+            <p className="type-lead mt-8 max-w-2xl text-edge-soft">
               EDGE03 helps businesses modernize their websites, connect existing
               tools, and improve the way customers interact with them online.
             </p>
@@ -58,10 +58,10 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-3">
               {heroSignals.map((signal) => (
                 <div key={signal.label} className="border border-edge-line bg-white/[0.02] p-4">
-                  <p className="text-xs font-semibold uppercase text-edge-muted">
+                  <p className="type-eyebrow text-edge-muted">
                     {signal.label}
                   </p>
-                  <p className="mt-2 text-sm font-semibold text-white">
+                  <p className="type-meta mt-2 text-white">
                     {signal.value}
                   </p>
                 </div>
@@ -99,20 +99,20 @@ export default function Home() {
       <Section tone="navy">
         <div className="grid gap-10 lg:grid-cols-[0.75fr_1fr] lg:items-center">
           <div>
-            <p className="mb-4 text-xs font-semibold uppercase text-edge-muted">
+            <p className="type-eyebrow mb-4 text-edge-muted">
               Systems philosophy
             </p>
-            <h2 className="text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
+            <h2 className="type-section-title text-white">
               We improve systems. We do not replace them by default.
             </h2>
           </div>
           <div className="grid gap-4 sm:grid-cols-3">
             {systemPrinciples.map((principle) => (
               <article key={principle.title} className="border border-edge-line bg-edge-black/40 p-5">
-                <h3 className="text-xl font-semibold text-white">
+                <h3 className="type-card-title text-white">
                   {principle.title}
                 </h3>
-                <p className="mt-4 text-sm leading-6 text-edge-soft">
+                <p className="type-small mt-4 text-edge-soft">
                   {principle.summary}
                 </p>
               </article>
@@ -141,10 +141,10 @@ export default function Home() {
         <div className="grid gap-4 md:grid-cols-2">
           {whyEdge.map((item, index) => (
             <div key={item} className="border border-edge-line bg-edge-black p-6">
-              <p className="mb-5 text-sm font-semibold text-edge-muted">
+              <p className="type-meta mb-5 text-edge-muted">
                 {String(index + 1).padStart(2, "0")}
               </p>
-              <p className="text-base leading-7 text-edge-soft">{item}</p>
+              <p className="type-body text-edge-soft">{item}</p>
             </div>
           ))}
         </div>
@@ -176,10 +176,10 @@ export default function Home() {
       <Section tone="navy" className="border-t border-edge-line">
         <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
-            <p className="mb-4 text-xs font-semibold uppercase text-edge-muted">
+            <p className="type-eyebrow mb-4 text-edge-muted">
               Start the conversation
             </p>
-            <h2 className="text-3xl font-semibold leading-tight text-white sm:text-4xl">
+            <h2 className="type-section-title text-white">
               Build a cleaner, more connected business presence.
             </h2>
           </div>

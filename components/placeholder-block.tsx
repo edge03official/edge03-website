@@ -32,10 +32,10 @@ export function PlaceholderBlock({
       <div aria-hidden="true" className="absolute left-0 right-0 top-1/2 h-px bg-edge-line/70" />
       <div aria-hidden="true" className="absolute bottom-0 top-0 left-1/2 w-px bg-edge-line/70" />
       <div className="relative z-10 m-auto grid max-w-xs gap-3">
-        <span className="text-xs font-semibold uppercase text-edge-muted">
+        <span className="type-eyebrow text-edge-muted">
           {variantLabel[variant]}
         </span>
-        <span className="text-sm leading-6 text-edge-soft">{label}</span>
+        <span className="type-small text-edge-soft">{label}</span>
       </div>
     </div>
   );

@@ -23,11 +23,11 @@ export default function IndustriesPage() {
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {industries.map((item, index) => (
             <article key={item} className="border border-edge-line bg-white/[0.02] p-6">
-              <p className="text-sm font-semibold text-edge-muted">
+              <p className="type-meta text-edge-muted">
                 {String(index + 1).padStart(2, "0")}
               </p>
-              <h2 className="mt-8 text-2xl font-semibold text-white">{item}</h2>
-              <p className="mt-4 text-sm leading-6 text-edge-soft">
+              <h2 className="type-card-title mt-8 text-white">{item}</h2>
+              <p className="type-small mt-4 text-edge-soft">
                 Placeholder industry copy, relevant services, proof points, and
                 customer workflow notes.
               </p>
