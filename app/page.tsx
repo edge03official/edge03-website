@@ -84,29 +84,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-b border-edge-line bg-edge-black">
-        <div className="mx-auto grid w-full max-w-7xl gap-8 px-5 py-16 sm:px-8 lg:grid-cols-[0.75fr_1fr] lg:px-10 lg:py-20">
-          <div>
-            <p className="type-eyebrow mb-4 text-edge-muted">About EDGE03</p>
-            <h2 className="type-section-title text-white">
-              A small website partner built on care and accountability.
-            </h2>
-          </div>
-          <div className="max-w-2xl lg:ml-auto">
-            <p className="type-lead text-edge-soft">
-              EDGE03 was started by Nate McFadden, an Air Force veteran who
-              believes small businesses deserve dependable websites, honest
-              guidance, and work done with care.
-            </p>
-            <p className="type-body mt-6 text-edge-muted">
-              The goal is simple: communicate clearly, pay attention to the
-              details, and help business owners feel confident about their
-              website.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <section className="bg-edge-black">
         <div className="mx-auto grid w-full max-w-7xl gap-8 px-5 py-16 sm:px-8 lg:grid-cols-[1fr_auto] lg:items-center lg:px-10 lg:py-20">
           <div className="max-w-2xl">
