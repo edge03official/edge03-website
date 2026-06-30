@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ButtonLink } from "@/components/button-link";
-import { company, services } from "@/lib/content";
+import { services } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Small Business Website Design and Support",
@@ -15,9 +15,6 @@ export default function Home() {
       <section className="border-b border-edge-line bg-edge-black">
         <div className="mx-auto w-full max-w-7xl px-5 py-24 sm:px-8 lg:px-10 lg:py-28">
           <div className="max-w-3xl">
-            <p className="type-eyebrow mb-6 text-edge-muted">
-              {company.tagline}
-            </p>
             <h1 className="type-page-title text-white">
               Websites built with care for small businesses.
             </h1>
@@ -33,24 +30,6 @@ export default function Home() {
               </ButtonLink>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="border-b border-edge-line bg-edge-black">
-        <div className="mx-auto grid w-full max-w-7xl gap-8 px-5 py-16 sm:px-8 lg:grid-cols-[0.8fr_1fr] lg:px-10 lg:py-20">
-          <div>
-            <p className="type-eyebrow mb-4 text-edge-muted">
-              What EDGE03 does
-            </p>
-            <h2 className="type-section-title text-white">
-              Helping small businesses look professional online.
-            </h2>
-          </div>
-          <p className="type-lead max-w-2xl text-edge-soft lg:ml-auto">
-            A good website should be clear, current, and easy to trust. EDGE03
-            helps improve the way your business shows up online without making
-            the process feel complicated.
-          </p>
         </div>
       </section>
 
