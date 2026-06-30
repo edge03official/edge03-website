@@ -31,7 +31,7 @@ export function Wordmark({
       </span>
       <span
         aria-hidden="true"
-        className="ml-[0.045em] -translate-y-[0.32em] text-[0.34em] leading-none"
+        className="ml-[0.045em] text-[0.5em] leading-none"
       >
         03
       </span>
