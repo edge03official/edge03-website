@@ -11,9 +11,11 @@ import { TestimonialCard } from "@/components/testimonial-card";
 import {
   caseStudies,
   company,
+  heroSignals,
   processSteps,
   proofStats,
   services,
+  systemPrinciples,
   testimonials,
   whyEdge,
 } from "@/lib/content";
@@ -28,12 +30,12 @@ export default function Home() {
   return (
     <>
       <section className="border-b border-edge-line bg-edge-black">
-        <div className="mx-auto grid min-h-[calc(100svh-5rem)] w-full max-w-7xl items-center gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:px-10">
+        <div className="mx-auto grid min-h-[calc(100svh-5rem)] w-full max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1.02fr_0.98fr] lg:px-10">
           <div>
-            <p className="mb-6 text-base font-semibold text-edge-soft">
+            <p className="mb-6 text-sm font-semibold uppercase text-edge-muted">
               {company.tagline}
             </p>
-            <h1 className="text-6xl font-semibold leading-none text-white sm:text-7xl lg:text-8xl">
+            <h1 className="max-w-4xl text-6xl font-semibold leading-none text-white sm:text-7xl lg:text-8xl">
               EDGE03
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-8 text-edge-soft sm:text-xl">
@@ -47,11 +49,24 @@ export default function Home() {
               </ButtonLink>
             </div>
           </div>
-          <div className="lg:pl-8">
+
+          <div className="grid gap-4 lg:pl-8">
             <PlaceholderBlock
-              label="Premium hero image or business systems visual placeholder"
-              height="lg"
+              label="Premium business systems visual placeholder"
+              height="xl"
             />
+            <div className="grid grid-cols-2 gap-3">
+              {heroSignals.map((signal) => (
+                <div key={signal.label} className="border border-edge-line bg-white/[0.02] p-4">
+                  <p className="text-xs font-semibold uppercase text-edge-muted">
+                    {signal.label}
+                  </p>
+                  <p className="mt-2 text-sm font-semibold text-white">
+                    {signal.value}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -75,27 +90,34 @@ export default function Home() {
         intro="Each service area is designed to be edited later with real descriptions, examples, pricing notes, or plan details."
       >
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {services.map((service) => (
-            <ServiceCard key={service.title} {...service} />
+          {services.map((service, index) => (
+            <ServiceCard key={service.title} index={index + 1} {...service} />
           ))}
         </div>
       </Section>
 
       <Section tone="navy">
-        <div className="grid gap-10 lg:grid-cols-[0.85fr_1fr] lg:items-center">
+        <div className="grid gap-10 lg:grid-cols-[0.75fr_1fr] lg:items-center">
           <div>
-            <p className="mb-4 text-sm font-semibold text-edge-soft">
+            <p className="mb-4 text-xs font-semibold uppercase text-edge-muted">
               Systems philosophy
             </p>
             <h2 className="text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
               We improve systems. We do not replace them by default.
             </h2>
           </div>
-          <p className="text-base leading-8 text-edge-soft sm:text-lg">
-            Many businesses already have the tools they need. EDGE03 focuses on
-            improving how those tools connect, how customers move through the
-            experience, and how the business keeps improving over time.
-          </p>
+          <div className="grid gap-4 sm:grid-cols-3">
+            {systemPrinciples.map((principle) => (
+              <article key={principle.title} className="border border-edge-line bg-edge-black/40 p-5">
+                <h3 className="text-xl font-semibold text-white">
+                  {principle.title}
+                </h3>
+                <p className="mt-4 text-sm leading-6 text-edge-soft">
+                  {principle.summary}
+                </p>
+              </article>
+            ))}
+          </div>
         </div>
       </Section>
 
@@ -104,7 +126,7 @@ export default function Home() {
         title="A clear path from assessment to ongoing support."
         intro="The process is structured enough to be dependable and flexible enough to fit the business in front of it."
       >
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {processSteps.map((step, index) => (
             <ProcessStep key={step.title} index={index + 1} {...step} />
           ))}
@@ -117,8 +139,11 @@ export default function Home() {
         title="Sharp execution with long-term business judgment."
       >
         <div className="grid gap-4 md:grid-cols-2">
-          {whyEdge.map((item) => (
+          {whyEdge.map((item, index) => (
             <div key={item} className="border border-edge-line bg-edge-black p-6">
+              <p className="mb-5 text-sm font-semibold text-edge-muted">
+                {String(index + 1).padStart(2, "0")}
+              </p>
               <p className="text-base leading-7 text-edge-soft">{item}</p>
             </div>
           ))}
@@ -139,7 +164,10 @@ export default function Home() {
           </div>
           <div className="grid gap-4 lg:grid-cols-2">
             {testimonials.map((testimonial) => (
-              <TestimonialCard key={testimonial.name + testimonial.role} {...testimonial} />
+              <TestimonialCard
+                key={testimonial.name + testimonial.role}
+                {...testimonial}
+              />
             ))}
           </div>
         </div>
@@ -148,7 +176,7 @@ export default function Home() {
       <Section tone="navy" className="border-t border-edge-line">
         <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
-            <p className="mb-4 text-sm font-semibold text-edge-soft">
+            <p className="mb-4 text-xs font-semibold uppercase text-edge-muted">
               Start the conversation
             </p>
             <h2 className="text-3xl font-semibold leading-tight text-white sm:text-4xl">

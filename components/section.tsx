@@ -23,22 +23,24 @@ export function Section({
         : "bg-edge-black";
 
   return (
-    <section className={`${toneClass} ${className}`}>
-      <div className="mx-auto w-full max-w-7xl px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
+    <section className={`border-b border-edge-line ${toneClass} ${className}`}>
+      <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-28">
         {(eyebrow || title || intro) && (
-          <div className="mb-12 max-w-3xl">
-            {eyebrow && (
-              <p className="mb-4 text-sm font-semibold text-edge-soft">
-                {eyebrow}
-              </p>
-            )}
-            {title && (
-              <h2 className="text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
-                {title}
-              </h2>
-            )}
+          <div className="mb-12 grid gap-6 lg:grid-cols-[0.78fr_1fr] lg:items-end">
+            <div className="max-w-3xl">
+              {eyebrow && (
+                <p className="mb-4 text-xs font-semibold uppercase text-edge-muted">
+                  {eyebrow}
+                </p>
+              )}
+              {title && (
+                <h2 className="text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
+                  {title}
+                </h2>
+              )}
+            </div>
             {intro && (
-              <p className="mt-5 text-base leading-7 text-edge-soft sm:text-lg">
+              <p className="max-w-2xl text-base leading-7 text-edge-soft sm:text-lg lg:ml-auto">
                 {intro}
               </p>
             )}

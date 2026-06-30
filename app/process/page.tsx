@@ -3,7 +3,7 @@ import { ButtonLink } from "@/components/button-link";
 import { PageIntro } from "@/components/page-intro";
 import { ProcessStep } from "@/components/process-step";
 import { Section } from "@/components/section";
-import { processSteps } from "@/lib/content";
+import { processSteps, workingModel } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Process",
@@ -18,10 +18,11 @@ export default function ProcessPage() {
         eyebrow="Process"
         title="Measured improvement from first assessment to ongoing support."
         summary="The process is built to understand the business first, improve the public experience, connect practical systems, and keep the work useful after launch."
+        meta={["Assess", "Modernize", "Integrate", "Support"]}
       />
 
       <Section>
-        <div className="grid gap-10 lg:grid-cols-4">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {processSteps.map((step, index) => (
             <ProcessStep key={step.title} index={index + 1} {...step} />
           ))}
@@ -35,14 +36,18 @@ export default function ProcessPage() {
         intro="Future copy can expand this area with discovery questions, project timelines, review points, and support expectations."
       >
         <div className="grid gap-4 md:grid-cols-3">
-          {["Discovery", "Implementation", "Support"].map((item) => (
-            <div key={item} className="border border-edge-line bg-edge-black p-6">
-              <h2 className="text-xl font-semibold text-white">{item}</h2>
-              <p className="mt-4 text-sm leading-6 text-edge-soft">
-                Placeholder copy for the {item.toLowerCase()} phase and how
-                decisions are made with the client.
+          {workingModel.map((item, index) => (
+            <article key={item.title} className="border border-edge-line bg-edge-black p-6">
+              <p className="text-sm font-semibold text-edge-muted">
+                {String(index + 1).padStart(2, "0")}
               </p>
-            </div>
+              <h2 className="mt-8 text-xl font-semibold text-white">
+                {item.title}
+              </h2>
+              <p className="mt-4 text-sm leading-6 text-edge-soft">
+                {item.summary}
+              </p>
+            </article>
           ))}
         </div>
       </Section>

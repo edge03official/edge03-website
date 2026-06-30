@@ -21,7 +21,12 @@ export function SiteHeader() {
           <span className="flex h-10 w-10 items-center justify-center border border-edge-line bg-edge-navy text-sm font-semibold">
             E3
           </span>
-          <span className="text-lg font-semibold">{company.name}</span>
+          <span className="grid leading-none">
+            <span className="text-lg font-semibold">{company.name}</span>
+            <span className="mt-1 hidden text-[11px] font-semibold uppercase text-edge-muted sm:block">
+              {company.tagline}
+            </span>
+          </span>
         </Link>
 
         <nav aria-label="Main navigation" className="hidden items-center gap-8 md:flex">
@@ -31,8 +36,10 @@ export function SiteHeader() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm transition-colors ${
-                  isActive ? "text-white" : "text-edge-soft hover:text-white"
+                className={`border-b py-2 text-sm transition-colors ${
+                  isActive
+                    ? "border-white text-white"
+                    : "border-transparent text-edge-soft hover:border-edge-line hover:text-white"
                 }`}
               >
                 {link.label}
@@ -40,6 +47,13 @@ export function SiteHeader() {
             );
           })}
         </nav>
+
+        <Link
+          href="/contact"
+          className="hidden min-h-11 items-center justify-center border border-edge-line px-5 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white/5 lg:inline-flex"
+        >
+          Start a Project
+        </Link>
 
         <button
           type="button"

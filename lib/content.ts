@@ -19,24 +19,35 @@ export const footerLinks = [
   { label: "Maintenance Plans", href: "/maintenance-plans" },
 ];
 
+export const heroSignals = [
+  { label: "Website", value: "Modernized" },
+  { label: "Tools", value: "Connected" },
+  { label: "Presence", value: "Improved" },
+  { label: "Support", value: "Ongoing" },
+];
+
 export const services = [
   {
     title: "Website Modernization",
+    signal: "Public presence",
     summary:
       "Refresh the structure, presentation, and usability of an existing business website without losing what already works.",
   },
   {
     title: "Tool Integration",
+    signal: "Connected systems",
     summary:
       "Connect forms, calendars, CRMs, analytics, automations, and business systems into a cleaner customer workflow.",
   },
   {
     title: "Online Presence Optimization",
+    signal: "Customer trust",
     summary:
       "Improve search visibility, local trust signals, conversion paths, and the digital details customers notice first.",
   },
   {
     title: "Long-Term Support",
+    signal: "Ongoing care",
     summary:
       "Provide reliable maintenance, improvements, monitoring, and practical guidance after launch.",
   },
@@ -66,9 +77,9 @@ export const processSteps = [
 ];
 
 export const proofStats = [
-  { value: "01", label: "Placeholder metric" },
-  { value: "02", label: "Client result area" },
-  { value: "03", label: "Support measure" },
+  { value: "01", label: "Modernize the public website" },
+  { value: "02", label: "Connect existing business tools" },
+  { value: "03", label: "Support steady improvement" },
 ];
 
 export const whyEdge = [
@@ -76,6 +87,24 @@ export const whyEdge = [
   "Practical integrations around the tools teams already use.",
   "Clear systems thinking across websites, operations, and customer experience.",
   "Long-term support designed for steady improvement after launch.",
+];
+
+export const systemPrinciples = [
+  {
+    title: "Keep",
+    summary:
+      "Preserve useful systems, working tools, existing workflows, and hard-won business knowledge.",
+  },
+  {
+    title: "Connect",
+    summary:
+      "Link the website, forms, calendars, analytics, and customer touchpoints into a cleaner flow.",
+  },
+  {
+    title: "Improve",
+    summary:
+      "Refine the customer experience, operational visibility, and long-term maintenance rhythm.",
+  },
 ];
 
 export const caseStudies = [
@@ -133,4 +162,56 @@ export const serviceDetails = [
       "Ongoing care for updates, edits, monitoring, issue resolution, and practical improvement planning.",
     items: ["Maintenance", "Reporting", "Iteration", "Guidance"],
   },
+];
+
+export const workingModel = [
+  {
+    title: "Discovery",
+    summary:
+      "Clarify goals, current tools, customer paths, and the parts of the existing system that should stay.",
+  },
+  {
+    title: "Implementation",
+    summary:
+      "Modernize the public experience, organize content, connect tools, and prepare the site for real operations.",
+  },
+  {
+    title: "Support",
+    summary:
+      "Monitor, maintain, adjust, and keep improving the website and connected systems after launch.",
+  },
+];
+
+export const industries = [
+  "Service businesses",
+  "Professional offices",
+  "Local operators",
+  "Growing teams",
+  "Specialized contractors",
+  "Community organizations",
+];
+
+export const maintenancePlans = [
+  {
+    title: "Essential",
+    summary:
+      "Placeholder plan for core updates, health checks, and reliable website care.",
+  },
+  {
+    title: "Professional",
+    summary:
+      "Placeholder plan for ongoing edits, reporting, integrations, and improvement support.",
+  },
+  {
+    title: "Ongoing Growth",
+    summary:
+      "Placeholder plan for active iteration, new sections, customer flow improvements, and advisory support.",
+  },
+];
+
+export const contactPrompts = [
+  "Current website or domain",
+  "Tools already in use",
+  "Most important customer action",
+  "Support needs after launch",
 ];

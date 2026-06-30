@@ -4,7 +4,7 @@ import { PageIntro } from "@/components/page-intro";
 import { PlaceholderBlock } from "@/components/placeholder-block";
 import { Section } from "@/components/section";
 import { ServiceCard } from "@/components/service-card";
-import { serviceDetails } from "@/lib/content";
+import { serviceDetails, systemPrinciples } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -19,32 +19,35 @@ export default function ServicesPage() {
         eyebrow="Services"
         title="Modernization, integration, presence, and support."
         summary="EDGE03 improves the systems around a business website so the customer experience becomes clearer and the operation becomes easier to manage."
+        meta={["Website sections", "Tool connections", "Presence improvements", "Support plans"]}
       />
 
       <Section>
         <div className="grid gap-4 md:grid-cols-2">
-          {serviceDetails.map((service) => (
-            <ServiceCard key={service.title} {...service} />
+          {serviceDetails.map((service, index) => (
+            <ServiceCard key={service.title} index={index + 1} {...service} />
           ))}
         </div>
       </Section>
 
       <Section
         tone="muted"
-        eyebrow="Service detail placeholder"
-        title="Ready for deeper service copy when the offer is finalized."
-        intro="This section can later hold package language, plan tiers, deliverables, or links into maintenance plans."
+        eyebrow="Service framework"
+        title="Designed to improve the operating system around the business."
+        intro="Future copy can expand this area with package language, examples, deliverables, and links into maintenance plans."
       >
         <div className="grid gap-6 lg:grid-cols-[1fr_0.8fr]">
-          <div className="border border-edge-line bg-edge-black p-6">
-            <h2 className="text-2xl font-semibold text-white">
-              Editable service narrative
-            </h2>
-            <p className="mt-5 text-base leading-7 text-edge-soft">
-              Placeholder copy for explaining how EDGE03 evaluates an existing
-              business website, identifies customer friction, improves important
-              digital touchpoints, and connects tools that are already in place.
-            </p>
+          <div className="grid gap-4 sm:grid-cols-3">
+            {systemPrinciples.map((principle) => (
+              <article key={principle.title} className="border border-edge-line bg-edge-black p-5">
+                <h2 className="text-xl font-semibold text-white">
+                  {principle.title}
+                </h2>
+                <p className="mt-4 text-sm leading-6 text-edge-soft">
+                  {principle.summary}
+                </p>
+              </article>
+            ))}
           </div>
           <PlaceholderBlock label="Service diagram or real work sample placeholder" />
         </div>
