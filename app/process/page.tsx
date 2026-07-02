@@ -32,7 +32,7 @@ export default function ProcessPage() {
 
       <Section tone="navy">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-          <h2 className="type-section-title max-w-2xl text-white">
+          <h2 className="type-section-title max-w-2xl text-edge-navy">
             Ready to talk through your website?
           </h2>
           <ButtonLink href="/contact">

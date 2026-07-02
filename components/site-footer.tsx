@@ -12,7 +12,7 @@ export function SiteFooter() {
             <span className="type-meta flex h-11 w-11 items-center justify-center border border-edge-line bg-edge-navy text-white">
               E3
             </span>
-            <Wordmark legal className="text-white" />
+            <Wordmark legal className="text-edge-navy" />
           </div>
           <p className="type-meta max-w-md text-edge-soft">{company.tagline}</p>
           <p className="type-small mt-6 max-w-md text-edge-muted">
@@ -26,17 +26,17 @@ export function SiteFooter() {
             <Link
               key={link.href}
               href={link.href}
-              className="type-small text-edge-soft transition-colors hover:text-white"
+              className="type-small text-edge-soft transition-colors hover:text-edge-navy"
             >
               {link.label}
             </Link>
           ))}
         </nav>
 
-        <div className="border border-edge-line bg-white/[0.02] p-5">
+        <div className="border border-edge-line bg-white/60 p-5 shadow-edge-soft">
           <p className="type-eyebrow text-edge-muted">Contact</p>
           <a
-            className="type-small mt-4 inline-flex text-edge-soft transition-colors hover:text-white"
+            className="type-small mt-4 inline-flex text-edge-soft transition-colors hover:text-edge-navy"
             href={`mailto:${company.email}`}
           >
             {company.email}

@@ -23,11 +23,11 @@ export default function ContactPage() {
 
       <Section>
         <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
-          <aside className="border border-edge-line bg-white/[0.02] p-6">
+          <aside className="border border-edge-line bg-white/70 p-6 shadow-edge-soft">
             <p className="type-eyebrow text-edge-muted">
               <Wordmark legal size="xs" />
             </p>
-            <h2 className="type-card-title mt-5 text-white">
+            <h2 className="type-card-title mt-5 text-edge-navy">
               Start with a simple message.
             </h2>
             <p className="type-body mt-4 text-edge-soft">
@@ -37,7 +37,7 @@ export default function ContactPage() {
               </BrandText>
             </p>
             <a
-              className="type-small mt-8 inline-flex text-edge-soft transition-colors hover:text-white"
+              className="type-small mt-8 inline-flex text-edge-soft transition-colors hover:text-edge-navy"
               href={`mailto:${company.email}`}
             >
               {company.email}
@@ -56,11 +56,11 @@ export default function ContactPage() {
             </div>
           </aside>
 
-          <form className="grid gap-4 border border-edge-line bg-edge-matte p-6">
+          <form className="grid gap-4 border border-edge-line bg-edge-matte p-6 shadow-edge-soft">
             <label className="type-small grid gap-2 text-edge-soft">
               Name
               <input
-                className="min-h-12 border border-edge-line bg-edge-black px-4 text-white outline-none transition-colors placeholder:text-edge-muted focus:border-white"
+                className="min-h-12 border border-edge-line bg-white px-4 text-edge-navy outline-none transition-colors placeholder:text-edge-muted focus:border-edge-navy"
                 name="name"
                 placeholder="Your name"
               />
@@ -68,7 +68,7 @@ export default function ContactPage() {
             <label className="type-small grid gap-2 text-edge-soft">
               Email
               <input
-                className="min-h-12 border border-edge-line bg-edge-black px-4 text-white outline-none transition-colors placeholder:text-edge-muted focus:border-white"
+                className="min-h-12 border border-edge-line bg-white px-4 text-edge-navy outline-none transition-colors placeholder:text-edge-muted focus:border-edge-navy"
                 name="email"
                 type="email"
                 placeholder="you@example.com"
@@ -77,7 +77,7 @@ export default function ContactPage() {
             <label className="type-small grid gap-2 text-edge-soft">
               Project Notes
               <textarea
-                className="min-h-40 resize-y border border-edge-line bg-edge-black px-4 py-3 text-white outline-none transition-colors placeholder:text-edge-muted focus:border-white"
+                className="min-h-40 resize-y border border-edge-line bg-white px-4 py-3 text-edge-navy outline-none transition-colors placeholder:text-edge-muted focus:border-edge-navy"
                 name="message"
                 placeholder="Tell me what you need help with."
               />

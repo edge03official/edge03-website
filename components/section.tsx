@@ -22,7 +22,7 @@ export function Section({
     tone === "muted"
       ? "bg-edge-matte"
       : tone === "navy"
-        ? "bg-edge-navy"
+        ? "bg-edge-matte"
         : "bg-edge-black";
 
   return (
@@ -37,7 +37,7 @@ export function Section({
                 </p>
               )}
               {title && (
-                <h2 className="type-section-title text-white">{renderBrandText(title)}</h2>
+                <h2 className="type-section-title text-edge-navy">{renderBrandText(title)}</h2>
               )}
             </div>
             {intro && (

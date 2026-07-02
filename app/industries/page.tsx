@@ -23,11 +23,11 @@ export default function IndustriesPage() {
       <Section>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {industries.map((item, index) => (
-            <article key={item} className="border border-edge-line bg-white/[0.02] p-6">
+            <article key={item} className="border border-edge-line bg-white/70 p-6 shadow-edge-soft">
               <p className="type-meta text-edge-muted">
                 {String(index + 1).padStart(2, "0")}
               </p>
-              <h2 className="type-card-title mt-8 text-white">{item}</h2>
+              <h2 className="type-card-title mt-8 text-edge-navy">{item}</h2>
               <p className="type-small mt-4 text-edge-soft">
                 <BrandText>
                   Placeholder copy for future examples, common website needs, and

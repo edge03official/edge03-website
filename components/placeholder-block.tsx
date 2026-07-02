@@ -25,7 +25,7 @@ export function PlaceholderBlock({
   return (
     <div
       data-placeholder-kind={variant}
-      className={`relative flex ${heights[height]} overflow-hidden border border-dashed border-edge-line bg-edge-black p-5 text-center`}
+      className={`relative flex ${heights[height]} overflow-hidden border border-dashed border-edge-line bg-white/50 p-5 text-center`}
     >
       {/* Replace this placeholder with the real image, logo, or proof asset when available. */}
       <div aria-hidden="true" className="absolute inset-5 border border-edge-line/70" />

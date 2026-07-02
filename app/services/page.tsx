@@ -31,7 +31,7 @@ export default function ServicesPage() {
 
       <Section tone="navy">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-          <h2 className="type-section-title max-w-2xl text-white">
+          <h2 className="type-section-title max-w-2xl text-edge-navy">
             Want help improving your website?
           </h2>
           <ButtonLink href="/contact">Start a Project</ButtonLink>

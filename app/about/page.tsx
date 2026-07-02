@@ -27,7 +27,7 @@ export default function AboutPage() {
       >
         <div className="flex flex-wrap gap-3">
           {founderValues.map((value) => (
-            <span key={value} className="type-meta border border-edge-line bg-white/[0.02] px-4 py-3 text-edge-soft">
+            <span key={value} className="type-meta border border-edge-line bg-white/60 px-4 py-3 text-edge-soft">
               {value}
             </span>
           ))}
@@ -37,7 +37,7 @@ export default function AboutPage() {
       <Section tone="muted" eyebrow="What matters" title="Professional, honest, and practical.">
         <div className="grid gap-4 md:grid-cols-2">
           {whyEdge.map((item) => (
-            <div key={item} className="border border-edge-line bg-edge-black p-6">
+            <div key={item} className="border border-edge-line bg-white/70 p-6 shadow-edge-soft">
               <p className="type-body text-edge-soft">{item}</p>
             </div>
           ))}

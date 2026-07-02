@@ -21,11 +21,11 @@ export default function MaintenancePlansPage() {
       <Section>
         <div className="grid gap-4 md:grid-cols-3">
           {maintenancePlans.map((plan, index) => (
-            <article key={plan.title} className="border border-edge-line bg-white/[0.02] p-6">
+            <article key={plan.title} className="border border-edge-line bg-white/70 p-6 shadow-edge-soft">
               <p className="type-meta text-edge-muted">
                 {String(index + 1).padStart(2, "0")}
               </p>
-              <h2 className="type-card-title mt-8 text-white">
+              <h2 className="type-card-title mt-8 text-edge-navy">
                 {plan.title}
               </h2>
               <p className="type-small mt-4 text-edge-soft">

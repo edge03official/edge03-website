@@ -10,17 +10,17 @@ const config: Config = {
     extend: {
       colors: {
         edge: {
-          black: "#07080A",
-          matte: "#0B0D10",
-          navy: "#071A33",
-          navyLight: "#102A4D",
-          line: "#242A33",
-          soft: "#B8C1CC",
-          muted: "#89939F",
+          black: "#F6F4EF",
+          matte: "#ECEFF1",
+          navy: "#1F354A",
+          navyLight: "#6C8294",
+          line: "#D9DEE3",
+          soft: "#5D6B78",
+          muted: "#7B8894",
         },
       },
       boxShadow: {
-        "edge-soft": "0 18px 60px rgba(0, 0, 0, 0.28)",
+        "edge-soft": "0 18px 44px rgba(31, 53, 74, 0.10)",
       },
     },
   },

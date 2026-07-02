@@ -15,7 +15,7 @@ export function SiteHeader() {
       <div className="mx-auto flex min-h-[4.5rem] w-full max-w-7xl items-center justify-between gap-6 px-5 sm:min-h-20 sm:px-8 lg:px-10">
         <Link
           href="/"
-          className="group flex min-w-0 items-center gap-4 text-white"
+          className="group flex min-w-0 items-center gap-4 text-edge-navy"
           onClick={() => setIsOpen(false)}
         >
           {/* Replace this wordmark block with the final EDGE03 logo asset. */}
@@ -23,7 +23,7 @@ export function SiteHeader() {
             E3
           </span>
           <span className="grid min-w-0 leading-none">
-            <Wordmark className="text-white" />
+            <Wordmark className="text-edge-navy" />
             <span className="type-meta mt-1.5 hidden text-edge-muted sm:block">
               {company.tagline}
             </span>
@@ -43,7 +43,7 @@ export function SiteHeader() {
                 className={`type-nav border px-3.5 py-2.5 transition-colors ${
                   isActive
                     ? "border-edge-line bg-edge-navy text-white"
-                    : "border-transparent text-edge-soft hover:border-edge-line hover:bg-edge-black hover:text-white"
+                    : "border-transparent text-edge-soft hover:border-edge-line hover:bg-white hover:text-edge-navy"
                 }`}
               >
                 {link.label}
@@ -54,23 +54,23 @@ export function SiteHeader() {
 
         <Link
           href="/contact"
-          className="type-button hidden min-h-10 items-center justify-center border border-edge-line px-4 text-white transition-colors hover:border-white hover:bg-white/5 lg:inline-flex"
+          className="type-button hidden min-h-10 items-center justify-center border border-edge-navy bg-edge-navy px-4 text-white transition-colors hover:border-[#2F4B64] hover:bg-[#2F4B64] lg:inline-flex"
         >
           Start a Project
         </Link>
 
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center border border-edge-line text-white transition-colors hover:border-white hover:bg-white/5 md:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center border border-edge-line text-edge-navy transition-colors hover:border-edge-navy hover:bg-white md:hidden"
           aria-label="Toggle navigation"
           aria-expanded={isOpen}
           onClick={() => setIsOpen((value) => !value)}
         >
           <span className="sr-only">Menu</span>
           <span className="flex w-5 flex-col gap-1.5">
-            <span className="h-px w-full bg-white" />
-            <span className="h-px w-full bg-white" />
-            <span className="h-px w-full bg-white" />
+            <span className="h-px w-full bg-edge-navy" />
+            <span className="h-px w-full bg-edge-navy" />
+            <span className="h-px w-full bg-edge-navy" />
           </span>
         </button>
       </div>
@@ -88,7 +88,7 @@ export function SiteHeader() {
                   key={link.href}
                   href={link.href}
                   className={`type-nav border-b border-edge-line py-4 transition-colors last:border-b-0 ${
-                    isActive ? "text-white" : "text-edge-soft hover:text-white"
+                    isActive ? "text-edge-navy" : "text-edge-soft hover:text-edge-navy"
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
@@ -98,7 +98,7 @@ export function SiteHeader() {
             })}
             <Link
               href="/contact"
-              className="type-button mt-3 inline-flex min-h-11 items-center justify-center border border-edge-line px-4 text-white transition-colors hover:border-white hover:bg-white/5"
+              className="type-button mt-3 inline-flex min-h-11 items-center justify-center border border-edge-navy bg-edge-navy px-4 text-white transition-colors hover:border-[#2F4B64] hover:bg-[#2F4B64]"
               onClick={() => setIsOpen(false)}
             >
               Start a Project

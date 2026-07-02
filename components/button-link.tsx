@@ -13,11 +13,11 @@ export function ButtonLink({
 }: ButtonLinkProps) {
   const classes = {
     primary:
-      "border-white bg-white text-edge-black hover:border-edge-soft hover:bg-edge-soft",
+      "border-edge-navy bg-edge-navy text-white hover:border-[#2F4B64] hover:bg-[#2F4B64]",
     secondary:
-      "border-edge-line bg-transparent text-white hover:border-white hover:bg-white/5",
+      "border-edge-line bg-white/50 text-edge-navy hover:border-edge-navy hover:bg-white",
     quiet:
-      "border-transparent bg-transparent text-edge-soft hover:border-edge-line hover:text-white",
+      "border-transparent bg-transparent text-edge-soft hover:border-edge-line hover:bg-white/50 hover:text-edge-navy",
   }[variant];
 
   return (
